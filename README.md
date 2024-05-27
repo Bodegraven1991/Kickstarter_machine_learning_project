@@ -1,91 +1,35 @@
-[![Shipping files](https://github.com/neuefische/ds-ml-project-template/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-ml-project-template/actions/workflows/workflow-02.yml)
+# Kickstarter machine learning project
 
-# Template Repo for ML Project
+This is our second project within the Data Science workshop of neuefische. As a group of three we chose a topic for which we were given a data set that we were supposed to clean, explore and ultimately use to train different machine learning algorithms. The hereby generated models were evaluated and the best one was used for an error analysis.
 
-This template repo will give you a good starting point for your second project. Besides the files used for creating a virtual environment, you will find a simple example of how to build a simple model in a python script. This is maybe the simplest way to do it. We train a simple model in the jupyter notebook, where we select only some features and do minimal cleaning. The output is then stored in simple python scripts.
+Our project was to develope a model that predicts the outcome of a Kickstarter campaign based on a large data set of previously ran campaigns. Kickstarter is a fundraiser website/application were anyone can present a project that they want to realise. If people like the project, they can back it, which means that they promise to pay a certain amount of money in case the project is successful. Each project has a certain goal of funding money that they want to reach in a set period of time. If at least that money is funded by backers, the project is successful. Only now the backers will pledge their money and receive the product when it is done.
 
-The data used for this is: [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
+We had three days, before we had to present our work to our cohort. During this time we organized ourselves with help of the `GitHub Kanban board`. Our basic schedule like this:
 
----
+|Deadline|Topic|Subtopics|
+|---|---|---|
+|time|Come up with a baseline model|Access data, clean data, EDA, baseline model|
+|time|Presentation draft|Decide for storytelling, have first graphs ready (introduction, EDA, modelling)|
+|time|Decide for a model|Train different ML algorithms, optimise as much as possible, compare evaluations|
+|time|Be ready to present|Error analysis on best model, polish presentation, practice presentation|
 
-## Set up a Kanban board on github
+In this repository you will find the following files of relevance:
+- `eda.ipynb`: Here we did the data cleaning and EDA of the data frame that we obtained via SQL from a webserver elsewhere
+- `How to optimize my model.ipynb`: Our gathered ideas how each one of us should try to optimize the model that we were working on
+- `final_presentation.pdf/key`: The final presentation that we gave for our cohort
+- folder `ML models`: contains the individual ipynb files were we trained and optimized different ML algorithms. The best model was XGBoost
 
-Go to ML-Project Template.
+Since we were a group of three, we divided the workload, which means that each one of us had their own models that they worked on. The contributions were as following:
 
-1. Click on "Use this Template" (Blue button)
-![alt text](./images/step_1a_new.png)
-
-1. Create new repository with relevant name, the owner should be your own account. 
-![alt text](./images/step_2_new.png)
-
-1. In your newly create repo, navigate to "Projects", and then click on "Link a project" (blue button). Normally you don't have created a project yet, so you can click the arrow navigation to create project on your profile. This project can be added at the end to your repository.
-![alt text](./images/add_project_new.png)
-
-
-4.  You will be guided to your profiles projects and it will be shown a create project window. Choose "board" view and **not** "table" view.
- ![alt text](./images/choose_board.png)
-5. Now change the name of your board, to match that of your chosen ML project. Then click "Create project" blue button. Great you create Kanban Board
-![alt text](./images/create_project_new.png)
-
-6. Next, assign rights to all your team members by clicking on the 3 dots on the top right of the board, and then go to "Settings".
-![alt text](./images/kanban_settings.png)
-
-
-7. Next, click on "Manage Access". Add your team mates by Searching for their github handle in the search window.Change their Role from ‘Write’ to ‘Admin’. Click on the blue button “Invite” to add them. Repeat for all team members.
-![alt text](./images/team_access_new.png
-)
-
-8. Next,go back to the kanban board and at the bottom  add action items with the relevant name e.g. “load data”, "get statistics", etc.
-![alt text](./images/load_data_item.png
-)
-
-
-9. Convert added item to issue by clicking on the 3 dots on the particular added item.
-![alt text](./images/convert_to_issue.png
-)
-
-10. Then select the repo you created  for the issue to be added. (Select the project repo example “my-project-name”)
-![alt text](./images/select_repo.png
-)
-
-11. When in project repo, Go to issues, then go to milestones. 
-![alt text](./images/to_milestones.png
-)
-
-12. Click on ”New milestone”.
-
-13. Give the milestone a due date and description as per the example provided by the coaches. Add description of: 
-
-    A) What needs to be completed to be done with the milestone
-
-    B) The definition of done: what will your result look like when you have completed the milestone? (check the provided format)
-![alt text](./images/new_milestone.png)
-
-14. Now navigate to "issues".
-
-15. Assign issues to milestones 
-![alt text](./images/milestone_to_issue_new.png)
-
-16. Give it assignees (people who will work on the task). 
-![alt text](./images/milestone_to_someone.png)
-
-### Optional: Add workflows
-
-Workflows can help you keep your kanban board automatically on track. 
-
-Select the project created in the steps above.  
-
-Click on the 3 dots to the far right of the board (...)
-
-Select workflow as the first option. 
-
-Activate the ones you feel necessary to your project
-
-Go back to your project repository (fraud detection))
+|Model|Contributors|
+|---|---|
+|Baseline model (logistic regression)|Dipali and Dominik (me)|
+|KNN|Dominik (me)|
+|random forest (RF)|Dipali|
+|AdaBoost|Leander|
+|XGBoost|Leander and Dominik (me)|
 
 ## Set up your Environment
-
-
 
 ### **`macOS`** type the following commands : 
 
@@ -138,27 +82,3 @@ Or ....
     ```Bash
     python.exe -m pip install --upgrade pip
     ```
-
-
-   
-## Usage
-
-In order to train the model and store test data in the data folder and the model in models run:
-
-**`Note`**: Make sure your environment is activated.
-
-```bash
-python example_files/train.py  
-```
-
-In order to test that predict works on a test set you created run:
-
-```bash
-python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
-```
-
-## Limitations
-
-Development libraries are part of the production environment, normally these would be separate as the production code should be as slim as possible.
-
-
