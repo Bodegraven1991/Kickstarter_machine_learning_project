@@ -8,10 +8,10 @@ We had three days, before we had to present our work to our cohort. During this 
 
 |Deadline|Topic|Subtopics|
 |---|---|---|
-|time|Come up with a baseline model|Access data, clean data, EDA, baseline model|
-|time|Presentation draft|Decide for storytelling, have first graphs ready (introduction, EDA, modelling)|
-|time|Decide for a model|Train different ML algorithms, optimise as much as possible, compare evaluations|
-|time|Be ready to present|Error analysis on best model, polish presentation, practice presentation|
+|12 h|Come up with a baseline model|Access data, clean data, EDA, baseline model|
+|24 h|Presentation draft|Decide for storytelling, have first graphs ready (introduction, EDA, modelling)|
+|48 h|Decide for a model|Train different ML algorithms, optimise as much as possible, compare evaluations|
+|62 h|Be ready to present|Error analysis on best model, polish presentation, practice presentation|
 
 In this repository you will find the following files of relevance:
 - `eda.ipynb`: Here we did the data cleaning and EDA of the data frame that we obtained via SQL from a webserver elsewhere
