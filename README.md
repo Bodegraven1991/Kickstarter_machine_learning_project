@@ -29,6 +29,25 @@ Since we were a group of three, we divided the workload, which means that each o
 |AdaBoost|Leander|
 |XGBoost|Leander and Dominik (me)|
 
+## Strategies to optimize our models
+
+Since we worked as a group of three people on this project and we decided that each one of us would establish and optimize a different modeling algorithm we decided for the following guidelines when it comes to optimize the model:
+
+- feature engineer (standardisation, normalisation, not on one-hot-encoded columns)
+- cross validation
+- gridsearch or randomsearch
+- if overfitting: regularisation (Ridge Regression or Lasso Regression)
+
+Furthermore, we decided to optimize for precision, because when we make a prediction on whether a new Kickstarter Project might be a success or not, we do not want false positives.
+
+## Important files/folders in this repository
+
+The first important file is the __eda.ipynb__. Here you will find all the EDA as well as the data cleaning that we did on the Kickstarter dataset that we received via SQL from postgres elsewhere. If you run the whole notebook from start to end, you will obtain the processed csv files that we used for our modelling notebooks.
+
+Next, you may want to look into the folder __ML models__. Here, you find the notebooks, where we ran our modeling and their respective optimisation. Since, I mainly worked on the __XGBoost__, this is the file that I myself properly commented for display. This is also our best model that we chose for our presentation in the end.
+
+In the folder __presentation__ you will find the PDF or keynote file of our final project presentation.
+
 ## Set up your Environment
 
 ### **`macOS`** type the following commands : 
